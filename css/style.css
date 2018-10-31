@@ -12,17 +12,17 @@ body{
   position: absolute;
   width: 700px;
   height: 600px;
-  left: 20%;
-  top:30%;
+  left: 30%;
+  top:15%;
   background-size: auto, auto,auto;
   transform: rotate(90deg);
-  animation: play 4s steps(25) infinite;
+  animation: play 4s linear infinite;
 }
 .auto {
   position: absolute;
   width: 30px;
   height: 60px;
-  left:43.5%;
+  left:55.5%;
   top: 90%;
   margin:inherit;
   /* transform: rotate(-90deg); */
@@ -34,8 +34,9 @@ body{
   height: 60px;
   left:-10%;
   background: url(../img/Car_3_01_opt.png);
-  transform: rotate(90deg);
-  animation: example 8s;
+  transform: rotate(-90deg);
+  animation: example2 6s linear;
+  animation-fill-mode: forwards;
 }
 .auto3{
   position: absolute;
@@ -44,24 +45,24 @@ body{
   left: -10%;
   background: url(../img/Car_2_01_opt.png);
   transform: rotate(90deg);
-  animation: example 8s;
+  animation: example 4s linear;
+  animation-fill-mode: forwards;
 }
 
-
 @keyframes play {
-    100% { background-position: -2000px;}
+    100% { background-position: 1603px;}
 }
 
 @keyframes play3 {
     100% { left:0px; top:1200px;}
 }
 @-webkit-keyframes example {
-    /* 0%   { left:-10px; top:0px;}
-    25%  {left:1000px; top:0px;}
-    50%  {left:1000px; top:1000px;}
-    75%  {left:0px; top:1000px;}
-    100% {left:0px; top:0px;} */
     to {
-       transform: translate(1200px,0px )rotate(90deg);
+       transform: translate(1200px,0px ) rotate(90deg);
+   }
+}
+@-webkit-keyframes example2 {
+    to {
+       transform: translate(1200px,0px ) rotate(-90deg);
    }
 }

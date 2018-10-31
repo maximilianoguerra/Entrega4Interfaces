@@ -1,6 +1,6 @@
 let count=0;
 let id="";
-let obstaculos = new Array(20);
+let obstaculos = new Array(30);
 $(document).keydown(function(event) {
   switch (event.keyCode) {
     case 38 :{acelerar();break;}
@@ -15,10 +15,10 @@ $(document).keydown(function(event) {
 cargarObstaculos();
 function cargarObstaculos(){
   for (var i = 0; i < obstaculos.length; i++) {
-    if (i<10) {
-      obstaculos[i]=new Obstaculo(i,2);
+    if (i<15) {
+      obstaculos[i]=new Obstaculo(i,2,"contramano");
     }else {
-      obstaculos[i]=new Obstaculo(i,3);
+      obstaculos[i]=new Obstaculo(i,3,"mano");
     }
 
   }
@@ -26,9 +26,14 @@ function cargarObstaculos(){
 setTimeout(crearObstaculos,3000);
 function crearObstaculos(){
   // let index=parseInt(getRandomArbitrary(0,11));
-  let topRandom = getRandomArbitrary(20,55);
+  let topRandom;
+    let obs = getObstaculo();
+  if(obs.direccon=="contramano"){
+  topRandom  = getRandomArbitrary(20,35.5);
+}else {
+  topRandom  = getRandomArbitrary(38.6,55);
+}
   let topParam= topRandom+'%';
-  let obs = getObstaculo();
   if(obs.disponible){
     obs.disponible=false;
     obs.posTop=topParam;
@@ -40,7 +45,7 @@ function crearObstaculos(){
   setTimeout(crearObstaculos,1000);
 }
 function getObstaculo(){
-  let i =parseInt(getRandomArbitrary(0,20));
+  let i =parseInt(getRandomArbitrary(0,30));
   if(obstaculos[i].disponible){
       return obstaculos[i];
   }else {
@@ -69,10 +74,25 @@ function moverDerecha(){
 
 }
 function acelerar() {
-  $(".ruta").css('animation' ,'play 2s steps(20) infinite');
+  $(".ruta").css('animation' ,'play 2s linear infinite');
+  $(".auto2").css('animation-play-state' ,'paused');
+  $(".auto3").css('animation-play-state' ,'paused');
+  $(".auto2").css('animation-duration' ,'3s');
+  $(".auto3").css('animation-duration' ,'3s');
+  console.log($(".auto3").css('animation-duration'));
+  $(".auto2").css('animation-play-state' ,'running');
+  $(".auto3").css('animation-play-state' ,'running');
+    console.log($(".auto3").css('animation-duration'));
 }
 function desalerar() {
-  $(".ruta").css('animation' ,'play 4s steps(20) infinite');
+  $(".ruta").css('animation' ,'play 4s linear infinite');
+  $(".auto2").css('animation-play-state' ,'paused');
+  $(".auto3").css('animation-play-state' ,'paused');
+  $(".auto2").css('animation-duration' ,'6s');
+  $(".auto3").css('animation-duration' ,'6s');
+  $(".auto2").css('animation-play-state' ,'running');
+  $(".auto3").css('animation-play-state' ,'running');
+    console.log($(".auto3").css('animation-duration'));
 }
 $(document).keyup(function(event) {
   switch (event.keyCode) {
