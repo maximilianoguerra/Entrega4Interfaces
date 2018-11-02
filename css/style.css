@@ -22,8 +22,9 @@ body{
   position: absolute;
   width: 30px;
   height: 60px;
-  left:55.5%;
-  top: 90%;
+  left:90.5%;
+  top: 38.5%;
+  transform: rotate(-90deg);
   margin:inherit;
   /* transform: rotate(-90deg); */
 

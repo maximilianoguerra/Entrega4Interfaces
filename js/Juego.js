@@ -40,6 +40,7 @@ function crearObstaculos(){
     $('.ruta').append(obs.div);
     id=$('#auto'+obs.id);
     id.css('top',obs.posTop);
+    obs.animationStart();
     obs.animationEnd();
   }
   setTimeout(crearObstaculos,1000);
@@ -57,19 +58,19 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 function moverIzquierda(){
-  let posX = $('.auto').css('left');
+  let posX = $('.auto').css('top');
   let x = $(".ruta").position();
-  posX=parseInt(posX)-10;
-  if (x.left+230<posX) {
-    $('.auto').css('left',posX);
+  posX=parseInt(posX)+10;
+  if (x.left<posX) {
+    $('.auto').css('top',posX);
   }
 }
 function moverDerecha(){
-  let posX = $('.auto').css('left');
+  let posX = $('.auto').css('top');
   let x = $(".ruta").position();
-  posX=parseInt(posX)+10;
+  posX=parseInt(posX)-10;
   if (x.left+460>posX) {
-    $('.auto').css('left',posX);
+    $('.auto').css('top',posX);
   }
 
 }
