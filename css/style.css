@@ -7,23 +7,23 @@ body{
 }
 
 .ruta {
-  background: url('../img/ruta2.png') left center;
+  background: url('../img/ruta3.png') center;
   overflow: hidden;
   position: absolute;
-  width: 700px;
+  width: 600px;
   height: 600px;
   left: 30%;
-  top:15%;
-  background-size: auto, auto,auto;
-  transform: rotate(90deg);
+  top:30%;
+  /* background-size: auto, auto,auto; */
+  /* transform: rotate(90deg); */
   animation: play 4s linear infinite;
 }
 .auto {
   position: absolute;
   width: 30px;
   height: 60px;
-  left:90.5%;
-  top: 38.5%;
+  left:30.5%;
+  top: 90.5%;
   transform: rotate(-90deg);
   margin:inherit;
   /* transform: rotate(-90deg); */
@@ -33,9 +33,9 @@ body{
   position: absolute;
   width: 30px;
   height: 60px;
-  left:-10%;
+  top:-10%;
   background: url(../img/Car_3_01_opt.png);
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
   animation: example2 6s linear;
   animation-fill-mode: forwards;
 }
@@ -43,15 +43,15 @@ body{
   position: absolute;
   width: 30px;
   height: 60px;
-  left: -10%;
+  top: -10%;
   background: url(../img/Car_2_01_opt.png);
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   animation: example 4s linear;
   animation-fill-mode: forwards;
 }
 
 @keyframes play {
-    100% { background-position: 1603px;}
+    100% { background-position-y: 1603px;}
 }
 
 @keyframes play3 {
@@ -59,11 +59,11 @@ body{
 }
 @-webkit-keyframes example {
     to {
-       transform: translate(1200px,0px ) rotate(90deg);
+       transform: translate(1200px,0px ) ;
    }
 }
 @-webkit-keyframes example2 {
     to {
-       transform: translate(1200px,0px ) rotate(-90deg);
+       transform: translate(1200px,0px );
    }
 }

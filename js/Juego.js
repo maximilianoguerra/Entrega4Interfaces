@@ -39,7 +39,7 @@ function crearObstaculos(){
     obs.posTop=topParam;
     $('.ruta').append(obs.div);
     id=$('#auto'+obs.id);
-    id.css('top',obs.posTop);
+    id.css('left',obs.posTop);
     obs.animationStart();
     obs.animationEnd();
   }
