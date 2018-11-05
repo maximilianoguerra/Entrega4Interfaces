@@ -16,18 +16,21 @@ body{
   top:30%;
   /* background-size: auto, auto,auto; */
   /* transform: rotate(90deg); */
-  animation: play 4s linear infinite;
+  /* animation: play 4s linear infinite; */
 }
-.auto {
+.heart{
+  width:62px;
+  height: 55px;
+  background: url('../img/spiteHeart.png') left center;
+  animation: heart2 1s steps(8) infinite;
+}
+.auto{
   position: absolute;
   width: 30px;
   height: 60px;
-  left:30.5%;
-  top: 90.5%;
-  transform: rotate(-90deg);
+  left:54.5%;
+  top: 85.5%;
   margin:inherit;
-  /* transform: rotate(-90deg); */
-
 }
 .auto2{
   position: absolute;
@@ -35,7 +38,6 @@ body{
   height: 60px;
   top:-10%;
   background: url(../img/Car_3_01_opt.png);
-  /* transform: rotate(-90deg); */
   animation: example2 6s linear;
   animation-fill-mode: forwards;
 }
@@ -45,13 +47,14 @@ body{
   height: 60px;
   top: -10%;
   background: url(../img/Car_2_01_opt.png);
-  /* transform: rotate(90deg); */
   animation: example 4s linear;
   animation-fill-mode: forwards;
 }
-
+@keyframes explosion {
+    100% { background-position: -1625px;}
+}
 @keyframes play {
-    100% { background-position-y: 1603px;}
+    100% { background-position-y: 1600px;}
 }
 
 @keyframes play3 {
@@ -59,11 +62,21 @@ body{
 }
 @-webkit-keyframes example {
     to {
-       transform: translate(1200px,0px ) ;
+       transform: translate(0px,900px ) ;
    }
 }
 @-webkit-keyframes example2 {
     to {
-       transform: translate(1200px,0px );
+       transform: translate(0px,900px );
    }
+}
+@-webkit-keyframes carRespawn {
+    0%{opacity:1.0}
+    25%{opacity:0.0}
+    50%{opacity:1.0}
+    75%{opacity:0.0}
+    100%{opacity:1.0}
+}
+@-webkit-keyframes heart2{
+  100%{background-position: -498px }
 }
