@@ -181,6 +181,6 @@ function cargarAutoPlayer(){
   $('.ruta').append(player1.div);
   $('#player').css('width',30);
   $('#player').css('height',60);
-  $('#player').css('background','url(../Entrega4Interfaces/img/car_opt2.png)');
+  $('#player').css('background','url(../Entrega4Interfaces/img/Car_opt2.png)');
   $('#player').css('animation','carRespawn 1s 2');
 }
