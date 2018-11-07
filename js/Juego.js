@@ -12,9 +12,7 @@ $('#showRank').hide();
 $(document).keydown(function(event) {
   if (commandActive) {
     switch (event.keyCode) {
-      case 38 :{acelerar();break;}
       case 37 :{moverIzquierda();break;}
-      case 40 :{alert("pulse abajo");break;}
       case 39 :{moverDerecha();break;}
       break;
       default:
@@ -148,14 +146,6 @@ function moverDerecha(){
     $('.auto').css('left',posX);
   }
 }
-$(document).keyup(function(event) {
-  switch (event.keyCode) {
-    case 38 :{desalerar();break;}
-    break;
-    default:
-
-  }
-});
 
 function cargarAutoPlayer(){
   $('.ruta').append(player1.div);

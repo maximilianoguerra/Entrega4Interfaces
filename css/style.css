@@ -122,3 +122,13 @@ body{
 @-webkit-keyframes heart2{
   100%{background-position: -402px }
 }
+@-webkit-keyframes moveLeft{
+  100%{
+  transform: rotate(-25deg);
+  }
+}
+@-webkit-keyframes moveLeftBack{
+  100%{
+  transform: rotate(25deg);
+  }
+}
