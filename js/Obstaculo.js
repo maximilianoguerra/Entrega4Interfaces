@@ -57,7 +57,6 @@ class Obstaculo {
           clearInterval(this.interval);
           idAuto.remove();
           this.disponible=true;
-          // this.sumar=false;
           this.player1.life+=1;
           $('#life').text('X'+this.player1.life);
         }else {
@@ -98,7 +97,7 @@ class Obstaculo {
     }
   }
   setImgHpBonus(){
-    this.img='url(../Entrega4Interfaces/img/HP_Bonus3.png)'
+    this.img='url(../Entrega4Interfaces/img/spriteheart4.png)'
   }
   getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
