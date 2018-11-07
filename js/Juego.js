@@ -1,7 +1,7 @@
 let count=0;
 let id="";
 let obstaculos = new Array(30);
-let posXleft = 54.5;
+let posXleft = 48.5;
 let intervalGame;
 let player1= new Player();
 let commandActive=true;
