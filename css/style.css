@@ -1,28 +1,63 @@
-* {
-    margin: 0 0;
-    padding: 0 0;
-}
-body{
-  background-color: #2678d0;
-}
 
+.gameTitle{
+  color: #142d52!important;
+  text-align:  center;
+}
+.bg-dark{
+  background-color: #3b567e!important;
+  color: #cad0d8!important;
+}
+.navbar-dark .navbar-brand {
+  color: #cad0d8;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #cad0d8;
+}
+.gameContainer{
+  border-radius: 20px;
+  background-color: #8ea0ba;
+}
+.btn2{
+  margin-top: 10px;
+  width: 100%;
+  background-color: #cad0d8!important;
+  border-color: #3b567e!important;
+  color: #1f3a62!important;
+}
+.lifeCount{
+  margin-top: 6%;
+
+}
 .ruta {
-  background: url('../img/ruta3.png') center;
-  overflow: hidden;
   position: absolute;
-  width: 600px;
-  height: 600px;
-  left: 30%;
-  top:30%;
-  /* background-size: auto, auto,auto; */
-  /* transform: rotate(90deg); */
-  /* animation: play 4s linear infinite; */
+  overflow: hidden;
+  float: left;
+  width: 90%;
+  height: 95%;
+  background: url('../img/ruta6.png') center;
+  background-size: auto,
+      auto,
+      auto;
+  margin-top: 20px;
+}
+.statsPlayer{
+  background-color: #405483;
+  border-radius: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  height: 700px;
+  color: #cad0d8!important;
 }
 .heart{
-  width:62px;
-  height: 55px;
-  background: url('../img/spiteHeart.png') left center;
-  animation: heart2 1s steps(8) infinite;
+  width:67px;
+  height: 60px;
+  background: url('../img/spriteheart4.png') left center;
+  animation: heart2 0.5s steps(6) infinite;
+}
+.loser{
+  height: 200px;
+  background: url(../img/Header.png) center no-repeat;
+  margin-top: 30%;
 }
 .auto{
   position: absolute;
@@ -50,11 +85,18 @@ body{
   animation: example 4s linear;
   animation-fill-mode: forwards;
 }
+.btn{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 @keyframes explosion {
     100% { background-position: -1625px;}
 }
 @keyframes play {
-    100% { background-position-y: 1600px;}
+    100% { background-position-y: 1503px;}
 }
 
 @keyframes play3 {
@@ -63,7 +105,7 @@ body{
 @-webkit-keyframes example {
     to {
        transform: translate(0px,900px ) ;
-   }
+     }
 }
 @-webkit-keyframes example2 {
     to {
@@ -78,5 +120,5 @@ body{
     100%{opacity:1.0}
 }
 @-webkit-keyframes heart2{
-  100%{background-position: -498px }
+  100%{background-position: -402px }
 }
