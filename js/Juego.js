@@ -29,6 +29,7 @@ $(document).on('click','.ranking',function () {
   $('#showRank').toggle();
 })
 $(document).on('click','#jugar',function () {
+  $('#jugar').attr('disabled','true');
   if (jugarVar) {
     jugarVar=false;
     cargarObstaculos();
@@ -45,7 +46,7 @@ $(document).on('click','#playAgain',function () {
     $('#score').text(player1.score);
     $('#life').text('X'+player1.life);
     cargarObstaculos();
-    jugar();
+    setTimeout(jugar,4000);
   }
 })
 
@@ -146,27 +147,6 @@ function moverDerecha(){
     posX=posX+"%";
     $('.auto').css('left',posX);
   }
-}
-function acelerar() {
-  $(".ruta").css('animation' ,'play 2s linear infinite');
-  $(".auto2").css('animation-play-state' ,'paused');
-  $(".auto3").css('animation-play-state' ,'paused');
-  $(".auto2").css('animation-duration' ,'3s');
-  $(".auto3").css('animation-duration' ,'3s');
-  console.log($(".auto3").css('animation-duration'));
-  $(".auto2").css('animation-play-state' ,'running');
-  $(".auto3").css('animation-play-state' ,'running');
-  console.log($(".auto3").css('animation-duration'));
-}
-function desalerar() {
-  $(".ruta").css('animation' ,'play 4s linear infinite');
-  $(".auto2").css('animation-play-state' ,'paused');
-  $(".auto3").css('animation-play-state' ,'paused');
-  $(".auto2").css('animation-duration' ,'6s');
-  $(".auto3").css('animation-duration' ,'6s');
-  $(".auto2").css('animation-play-state' ,'running');
-  $(".auto3").css('animation-play-state' ,'running');
-  console.log($(".auto3").css('animation-duration'));
 }
 $(document).keyup(function(event) {
   switch (event.keyCode) {
